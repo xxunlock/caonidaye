@@ -1,0 +1,14 @@
+apscheduler
+ccxt
+fastapi
+numpy
+pandas
+python-telegram-bot
+pyyaml
+redis
+scikit-learn
+sqlalchemy
+ta
+uvicorn
+websockets
+xgboost
