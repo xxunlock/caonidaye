@@ -1,0 +1,35 @@
+app:
+  name: ai-crypto-quant
+  env: production
+  timezone: UTC
+  log_level: INFO
+
+database:
+  url: sqlite:///./ai_crypto_quant.db
+
+redis:
+  url: redis://localhost:6379/0
+
+telegram:
+  enabled: false
+  bot_token: ""
+  chat_id: ""
+
+exchanges:
+  enabled: [binance, okx, bybit]
+  symbols: [BTC/USDT, ETH/USDT, SOL/USDT]
+  timeframes: [1m, 5m, 15m, 1h]
+  ohlcv_limit: 200
+
+thresholds:
+  whale_btc: 500
+  whale_eth: 5000
+  anomaly_price_change_5m: 0.03
+  long_prob: 0.65
+  short_prob: 0.65
+
+scheduler:
+  price_seconds: 10
+  indicator_minutes: 1
+  prediction_minutes: 5
+  signal_minutes: 10
