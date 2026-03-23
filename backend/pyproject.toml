@@ -1,0 +1,37 @@
+[project]
+name = "crypto-monitor"
+version = "0.1.0"
+description = "24/7 crypto market monitoring and AI analysis platform"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.116.0",
+  "uvicorn[standard]>=0.30.0",
+  "httpx>=0.28.0",
+  "pydantic>=2.8.0",
+  "pydantic-settings>=2.4.0",
+  "pandas>=2.2.0",
+  "numpy>=2.0.0",
+  "ta>=0.11.0",
+  "websockets>=13.0",
+  "sqlalchemy>=2.0.0",
+  "aiosqlite>=0.20.0",
+  "redis>=5.0.0",
+  "jinja2>=3.1.0",
+  "python-telegram-bot>=21.0",
+  "tenacity>=9.0.0",
+  "structlog>=24.0.0",
+  "openai>=1.45.0",
+  "scikit-learn>=1.5.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+  "pytest-asyncio>=0.24.0",
+  "ruff>=0.6.0",
+  "mypy>=1.11.0"
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
